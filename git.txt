@@ -1,0 +1,6 @@
+git init 创建管理仓库
+git add . 添加所有文件到暂存区
+git commit 添加暂存区到仓库
+git status  查看是否有文件未提交
+git diff 文件名 查看文件修改了什么内容
+git log 显示从最近到最远的提交日志 git log –pretty=oneline（省略部分内容显示）
