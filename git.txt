@@ -1,10 +1,26 @@
 git init 创建管理仓库
 git add . 添加所有文件到暂存区
 git commit 添加暂存区到仓库
-git status  查看是否有文件未添加（红）提交（绿）
-git diff 文件名 查看文件修改了什么内容
-git log 显示从最近到最远的提交日志 git log –pretty=oneline（省略部分内容显示）(实际使用过程中没信息展示)
+git status  查看是否有文件未添加（显红）未提交（显绿）
+git diff 文件名 查看文件修改了什么未提交的内容
+git log -p 显示从最近到最远的提交日志
 cat +文件名 展示当前文件具体内容
 git reset --hard HEAD^返回到上一个版本 git reset --hard HEAD~100 返回到前100个版本 git reset --hard 版本号 回到目标版本
 git reflog 获取到所有的版本号
+git checkout – 文件名 丢弃工作区的修改
+ 1.readme.txt自动修改后，还没有放到暂存区，使用 撤销修改就回到和版本库一模一样的状态。
+ 2.另外一种是readme.txt已经放入暂存区了，接着又作了修改，撤销修改就回到添加暂存区后的状态。且无法在进行1
+rm 文件名 删除文件，彻底删除需要commit
+   git checkout –- 文件名 版本库中未删除文件时可以进行恢复
 
+git remote add origin git地址 连接远程仓库
+git push -u origin master 们第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，    还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+git push origin master 把本地master分支的最新修改推送到github上
+
+git clone  git地址克隆远程仓库
+查看分支：git branch
+创建分支：git branch name
+切换分支：git checkout name
+创建+切换分支：git checkout –b name
+合并某分支到当前分支：git merge name
+删除分支：git branch –d name
