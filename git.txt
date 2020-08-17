@@ -1,3 +1,4 @@
+                                                                                                        git使用手册
 git init 创建管理仓库
 git add . 添加所有文件到暂存区
 git commit 添加暂存区到仓库
